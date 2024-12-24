@@ -41,7 +41,7 @@ int	ft_put_ptr(void *ptr)
 	unsigned long long addr;
 
 	if (!ptr)
-		return (ft_putstr_fd("0x0", 1));
+		return (ft_putstr_fd("(nil)", 1));
 	addr = (unsigned long long)ptr;
 	write(1, "0x", 2);
 	return (2 + ft_put_hex_ull_fd(addr, 0, 1));

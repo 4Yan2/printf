@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 SRCS = ft_format.c ft_putnbr_fd.c ft_put_unsigned_fd.c \
 	   ft_putchar_fd.c ft_put_ptr.c \
-	   ft_put_hex_fd.c ft_putstr_fd.c ft_printf.c
+	   ft_put_hex_fd.c ft_putstr_fd.c ft_printf.c ft_strlen.c
 
 OBJS = $(SRCS:.c=.o)
 

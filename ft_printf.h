@@ -1,5 +1,5 @@
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -18,5 +18,6 @@ int	ft_put_hex_fd(unsigned int n, int is_uppercase, int fd);
 int	ft_putchar_fd(char c, int fd);
 int ft_put_hex_ull_fd(unsigned long long n, int is_uppercase, int fd);
 int count_hex_digits_ull(unsigned long long n);
+size_t	ft_strlen(const char *str);
 
 #endif
