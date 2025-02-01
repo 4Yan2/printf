@@ -6,7 +6,7 @@
 /*   By: yalaatik <yalaatik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 10:49:20 by yalaatik          #+#    #+#             */
-/*   Updated: 2025/02/01 15:13:23 by yalaatik         ###   ########.fr       */
+/*   Updated: 2025/02/01 15:38:10 by yalaatik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ int ft_form_set(const char *format, va_list args)
 				return (-1);
 			total_len += check;
 			format += 2;
-			continue;
 		}
-		if (*format == '\0')
+		else if (*format == '\0')
 			break;
-		if (*format == '%' && *(format + 1) == '\0')
+		else if (*format == '%' && *(format + 1) == '\0')
 			return (-1);
 		else
 		{
