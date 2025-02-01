@@ -6,7 +6,7 @@
 /*   By: yalaatik <yalaatik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 11:00:14 by yalaatik          #+#    #+#             */
-/*   Updated: 2025/02/01 15:56:36 by yalaatik         ###   ########.fr       */
+/*   Updated: 2025/02/01 15:57:05 by yalaatik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	count_hex_digits_ull(unsigned long long n)
 int	ft_put_hex_ull_fd(unsigned long long n, int is_uppercase, int fd)
 {
 	const char	*base_lower;
-	const char	*base_upper;
 	int			printed_chars;
 
 	base_lower = "0123456789abcdef";
