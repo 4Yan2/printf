@@ -6,7 +6,7 @@ SRCS = ft_format.c ft_putnbr_fd.c ft_put_unsigned_fd.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra -I.
 
 all: $(NAME)
