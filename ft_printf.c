@@ -6,13 +6,13 @@
 /*   By: yalaatik <yalaatik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 10:49:20 by yalaatik          #+#    #+#             */
-/*   Updated: 2025/02/01 15:38:10 by yalaatik         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:01:33 by yalaatik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_form_set(const char *format, va_list args)
+int ft_form_set(const char *format, va_list args, int fd)
 {
 	int check;
 	int total_len;
@@ -22,7 +22,7 @@ int ft_form_set(const char *format, va_list args)
 	{
 		if (*format == '%' && *(format + 1) != '\0')
 		{
-			check = ft_format(*(format + 1), args);
+			check = ft_format(*(format + 1), args, fd);
 			if (check == (-1))
 				return (-1);
 			total_len += check;
@@ -34,7 +34,7 @@ int ft_form_set(const char *format, va_list args)
 			return (-1);
 		else
 		{
-			if (ft_putchar_fd(*format, 1) == -1)
+			if (ft_putchar_fd(*format, fd) == -1)
 				return (-1);
 			total_len++;
 			format++;
@@ -47,9 +47,11 @@ int ft_printf(const char *format, ...)
 {
 	int total_len;
 	va_list args;
+	int	fd;
 
+	fd = 1;
 	va_start(args, format);
-	total_len = ft_form_set(format, args);
+	total_len = ft_form_set(format, args, fd);
 	va_end(args);
 	return (total_len);
 }
