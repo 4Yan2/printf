@@ -6,7 +6,7 @@
 /*   By: yalaatik <yalaatik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 10:49:20 by yalaatik          #+#    #+#             */
-/*   Updated: 2025/02/01 16:01:33 by yalaatik         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:05:48 by yalaatik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int ft_printf(const char *format, ...)
 	va_list args;
 	int	fd;
 
-	fd = 1;
+	fd = STDOUT_FILENO;
 	va_start(args, format);
 	total_len = ft_form_set(format, args, fd);
 	va_end(args);
